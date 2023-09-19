@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_login"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingVertical="@dimen/gap_larger">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/gap_larger"
+            android:background="@drawable/bg_card_login"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/gap_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_register_logo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter" />
+
+            <br.com.epistemic.app.commom.custom.NormalInputText
+                android:id="@+id/input_register_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/gap_normal"
+                android:layout_marginTop="32dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="0dp"
+                app:hint="@string/name"
+                app:icon="@drawable/ic_person"
+                app:strokeWidth="0dp" />
+
+            <br.com.epistemic.app.commom.custom.NormalInputText
+                android:id="@+id/input_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/gap_normal"
+                android:layout_marginTop="@dimen/gap_normal"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="0dp"
+                app:hint="@string/email"
+                app:icon="@drawable/ic_person"
+                app:strokeWidth="0dp" />
+
+            <br.com.epistemic.app.commom.custom.PasswordInputText
+                android:id="@+id/input_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/gap_normal"
+                android:layout_marginTop="@dimen/gap_normal"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="0dp"
+                app:hint="@string/password"
+                app:icon="@drawable/ic_lock"
+                app:strokeWidth="0dp" />
+
+            <br.com.epistemic.app.commom.custom.PasswordInputText
+                android:id="@+id/input_register_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/gap_normal"
+                android:layout_marginTop="@dimen/gap_normal"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="0dp"
+                app:hint="@string/confirm_password"
+                app:icon="@drawable/ic_lock"
+                app:strokeWidth="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_register_submit"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="@dimen/gap_normal"
+                android:layout_marginTop="@dimen/gap_normal"
+                android:backgroundTint="@color/purple"
+                android:paddingVertical="10dp"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

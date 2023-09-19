@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/gap_normal"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/btn_settings_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@android:color/transparent"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_settings_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="56dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/btn_settings_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_settings_back"
+            app:layout_constraintTop_toTopOf="@id/btn_settings_back" />
+
+        <TextView
+            android:id="@+id/tv_settings_medicines"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginTop="@dimen/gap_normal"
+            android:text="@string/medicines"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/switch_settings_medicines"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_settings_icon" />
+
+        <TextView
+            android:id="@+id/tv_settings_medicines_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:text="@string/medicines_description"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/switch_settings_medicines"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_medicines" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_settings_medicines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/gap_normal"
+            app:layout_constraintBottom_toBottomOf="@id/tv_settings_medicines_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_settings_medicines" />
+
+        <TextView
+            android:id="@+id/tv_settings_exercises"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginTop="@dimen/gap_normal"
+            android:text="@string/exercises"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/switch_settings_exercises"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_medicines_desc" />
+
+        <TextView
+            android:id="@+id/tv_settings_exercises_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:text="@string/exercises_description"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/switch_settings_exercises"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_exercises" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_settings_exercises"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/gap_normal"
+            app:layout_constraintBottom_toBottomOf="@id/tv_settings_exercises_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_settings_exercises" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_1_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginTop="@dimen/gap_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_exercises_desc" />
+
+        <TextView
+            android:id="@+id/tv_settings_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginTop="@dimen/gap_normal"
+            android:text="@string/language"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_1_settings" />
+
+        <TextView
+            android:id="@+id/tv_settings_language_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:text="@string/language_description"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_language" />
+
+        <TextView
+            android:id="@+id/tv_settings_language_pt_br"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginTop="@dimen/gap_normal"
+            android:text="@string/language_pt_br"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toStartOf="@id/radio_group_settings_language"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/radio_group_settings_language" />
+
+        <TextView
+            android:id="@+id/tv_settings_language_en_us"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginTop="@dimen/gap_normal"
+            android:text="@string/language_en_us"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="@id/radio_group_settings_language"
+            app:layout_constraintEnd_toStartOf="@id/radio_group_settings_language"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_language_pt_br" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_settings_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gap_normal"
+            android:layout_marginEnd="@dimen/gap_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_language_desc">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_btn_languages_pt_br"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/tv_settings_language_pt_br" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_btn_languages_en_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/tv_settings_language_en_us" />
+
+        </RadioGroup>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_2_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginTop="@dimen/gap_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radio_group_settings_language" />
+
+        <TextView
+            android:id="@+id/tv_settings_notifications"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginTop="@dimen/gap_normal"
+            android:text="@string/notifications"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_2_settings" />
+
+        <TextView
+            android:id="@+id/tv_settings_notifications_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:text="@string/notifications_description"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_notifications" />
+
+        <TextView
+            android:id="@+id/tv_settings_notifications_option_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginVertical="10dp"
+            android:text="@string/notifications_option_1"
+            app:layout_constraintBottom_toTopOf="@+id/tv_settings_notifications_option_2"
+            app:layout_constraintEnd_toStartOf="@id/radio_group_settings_notifications"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/radio_group_settings_notifications" />
+
+        <TextView
+            android:id="@+id/tv_settings_notifications_option_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginVertical="10dp"
+            android:text="@string/notifications_option_2"
+            app:layout_constraintBottom_toTopOf="@id/tv_settings_notifications_option_3"
+            app:layout_constraintEnd_toStartOf="@id/radio_group_settings_notifications"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_notifications_option_1" />
+
+        <TextView
+            android:id="@+id/tv_settings_notifications_option_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginVertical="10dp"
+            android:text="@string/notifications_option_3"
+            app:layout_constraintBottom_toTopOf="@id/tv_settings_notifications_option_4"
+            app:layout_constraintEnd_toStartOf="@id/radio_group_settings_notifications"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_notifications_option_2" />
+
+        <TextView
+            android:id="@+id/tv_settings_notifications_option_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_normal"
+            android:layout_marginVertical="10dp"
+            android:text="@string/notifications_option_4"
+            app:layout_constraintBottom_toBottomOf="@id/radio_group_settings_notifications"
+            app:layout_constraintEnd_toStartOf="@id/radio_group_settings_notifications"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_notifications_option_3" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_settings_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gap_normal"
+            android:layout_marginEnd="@dimen/gap_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_notifications_desc">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_btn_notifications_opt_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/tv_settings_notifications_option_1" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_btn_notifications_opt_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/tv_settings_notifications_option_2" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_btn_notifications_opt_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/tv_settings_notifications_option_3" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_btn_notifications_opt_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/tv_settings_notifications_option_4" />
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
