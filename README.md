@@ -8,10 +8,15 @@
 ### 2º Modo ⬇️📲
 - Para instalar o apk, Clique [Aqui](https://github.com/ovitorhilario/epistemic-app/releases/download/v1.0.0/epistemic.apk)
 
-## >> Guia de Uso
+## >> Guia de Uso 🧾
 - Para fazer login, use as credenciais, elas foram arbitrariamente escolhidas para simulação dos casos de uso.
   - e-mail: `epistemic@gmail.com`
   - senha: `123456`
+
+## ScreenShots 📸
+| Login | Tela Inicial | Configurações | 
+| :--------------------: | :--------------------: | :--------------------: |
+| ![01](https://github.com/ovitorhilario/epistemic-app/assets/81326138/ccfc0431-67fb-41d1-8a4e-44a5c952ee12) | ![02](https://github.com/ovitorhilario/epistemic-app/assets/81326138/12df81db-f088-47ef-a72c-14185127d831) | ![03](https://github.com/ovitorhilario/epistemic-app/assets/81326138/265ecee0-4347-4be7-bdfa-135761157830) |
 
 ## >> Vídeo de demonstração do App
 - https://youtu.be/UJ8c4Ukc1Kg
