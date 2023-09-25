@@ -6,7 +6,7 @@
     - `git clone https://github.com/ovitorhilario/epistemic-app.git`
 
 ### 2º Modo ⬇️📲 
-- Para instalar o apk, Clique [Aqui](https://github.com/ovitorhilario/epistemic-app/releases/download/v1.0.0/epistemic.apk)
+- Para instalar o apk, Clique [Aqui](https://github.com/ovitorhilario/epistemic-app/releases/download/v1.0.1/epistemic.apk)
 
 ## Guia de Uso 🧾 
 - Para fazer login, use as credenciais, elas foram arbitrariamente escolhidas para simulação dos casos de uso.
