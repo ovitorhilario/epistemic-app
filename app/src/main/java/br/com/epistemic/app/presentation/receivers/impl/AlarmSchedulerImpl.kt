@@ -22,14 +22,17 @@ class AlarmSchedulerImpl @Inject constructor(
 
     override fun schedule(item: AlarmItem): String? {
         if (item.notifyPerDay == 0) return null
-        val intent = Intent(context, AlarmReceiver::class.java)
+        val intent = Intent(context, AlarmReceiver::class.java).apply {
+            putExtra("EXTRA_MESSAGE", REMINDER_CHANNEL_ID)
+        }
         val notifyHours = getNotifyHours(item.notifyPerDay)
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = System.currentTimeMillis()
 
         for ((idx, hour) in notifyHours.withIndex()) {
-            val pendingIntent = PendingIntent.getBroadcast(context, (idx + 1), intent, PendingIntent.FLAG_UPDATE_CURRENT or FLAG_IMMUTABLE)
-            Log.i(TAG, "create pedingIntent: ${idx + 1}")
+            val requestCode = idx + 1
+            val pendingIntent = PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT or FLAG_IMMUTABLE)
+
             calendar.set(Calendar.HOUR_OF_DAY, hour)
             calendar.set(Calendar.MINUTE, 0)
             calendar.set(Calendar.SECOND, 0)
@@ -50,7 +53,6 @@ class AlarmSchedulerImpl @Inject constructor(
         if (notifyPerDay == 0) return
         try {
             for (idx in 1..notifyPerDay) {
-                Log.i(TAG, "delete pedingIntent: ${idx}")
                 alarmManager.cancel(
                     PendingIntent.getBroadcast(
                         context, idx, Intent(context, AlarmReceiver::class.java),

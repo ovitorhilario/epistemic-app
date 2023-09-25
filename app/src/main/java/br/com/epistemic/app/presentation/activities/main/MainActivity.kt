@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.ContextWrapper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
@@ -31,14 +32,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
         setupNavHost()
-
-        val calendar = Calendar.getInstance()
-        calendar.timeInMillis = System.currentTimeMillis()
-
-
-        calendar.timeInMillis
     }
 
     private fun setupNavHost() {
@@ -55,7 +49,11 @@ class MainActivity : AppCompatActivity() {
                 val repo = UserPreferencesRepositoryImpl(store)
                 tag = runBlocking { repo.userPrefs.first().languageTag }
             } catch (e: IOException) {
-                // TODO Show Message : Error to Load Language
+                Toast.makeText(
+                    this,
+                    "Erro to set Language!",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
             val localeToSwitchTo = Locale(tag)
